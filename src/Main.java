@@ -35,6 +35,12 @@ public class Main {
         graph.addEdge("Semey", "Shymkent", 5.4);
     }
 
+    /**
+     * Outputs the path found by the search algorithm.
+     *
+     * @param search The search algorithm instance.
+     * @param key The destination vertex.
+     */
     public static void outputPath(Search<String> search, String key) {
         if (search.hasPathTo(key)) {
             for (String v : search.pathTo(key)) {
