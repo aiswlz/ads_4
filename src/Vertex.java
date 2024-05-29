@@ -24,9 +24,5 @@ public class Vertex<V> {
     public double getWeightTo(Vertex<V> destination) {
         return adjacentVertices.get(destination);
     }
-    @Override
-    public String toString() {
-        return String.valueOf(data);
-    }
 
 }
