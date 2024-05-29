@@ -36,10 +36,13 @@ public class Main {
     }
 
     public static void outputPath(Search<String> search, String key) {
-        for (String v : search.pathTo(key)) {
-            System.out.print(v + " -> ");
+        if (search.hasPathTo(key)) {
+            for (String v : search.pathTo(key)) {
+                System.out.print(v + " -> ");
+            }
+            System.out.println();
+        } else {
+            System.out.println("No path found.");
         }
-
-        System.out.println();
     }
 }
